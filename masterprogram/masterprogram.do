@@ -3,21 +3,18 @@
 /// Programmer: Tyler Jette /// 
 /// Date Started: 10/18/2018 /// 
 /// Version: 1.0.0 ///
+/// Date Completed: 11/23/2018 ////
 
 
 
 /// Begin Program /// 
-import delimited /Users/Tyler/Documents/tjette-github/investment-calculator/inputfiles/inputs.csv
+import delimited // Enter file path of program package
 
-gen compounded_num = . 
+gen result =.
+replace result = (initialinvestment+(monthlycontribution*(12*investmentterm))+(monthlycontribution*(12*investmentterm)*(1+interestrate)))
 
-gen result = initialinvestment*(1+(interestrate/compounded_num))*(investmentterm)
-
-replace monthlycontribution = investmentterm*monthlycontribution
-
-replace result = monthlycontribution + result 
-
-display result
+cd "file path of output file"
+outreg2 using result.doc, replace sum(log) keep(result)
 
 // End Program
 
