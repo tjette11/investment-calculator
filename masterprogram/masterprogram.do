@@ -2,8 +2,8 @@
 /// Takes input files from /inputfiles folder as parameters /// 
 /// Programmer: Tyler Jette /// 
 /// Date Started: 10/18/2018 /// 
-/// Version: 1.0.0 ///
-/// Date Completed: 11/23/2018 ////
+/// Version: 1.0.1 ///
+/// Date Completed: 12/02/2018 ////
 
 
 
